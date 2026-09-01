@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8eee9;
+    color: #4b3b3b;
+}
+
+/* COVER */
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.scrapbook-card {
+    position: relative;
+
+    width: 90%;
+    max-width: 650px;
+    min-height: 500px;
+
+    background: #fffaf7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 30px;
+
+    box-shadow: 0 15px 40px rgba(90, 60, 60, 0.15);
+
+    transform: rotate(-1deg);
+}
+
+/* LITTLE PIECE OF TAPE */
+
+.scrapbook-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(1deg);
+
+    width: 120px;
+    height: 35px;
+
+    background: #e7c6c6;
+
+    opacity: 0.8;
+}
+
+/* SMALL INTRO TEXT */
+
+.small-text {
+    font-size: 0.9rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #9c7777;
+
+    margin-bottom: 10px;
+}
+
+/* EVE */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(4rem, 12vw, 7rem);
+
+    color: #8f6262;
+
+    margin-bottom: 5px;
+}
+
+/* SUBTITLE */
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+
+    color: #806d6d;
+}
+
+/* HEART */
+
+.heart {
+    font-size: 3rem;
+
+    color: #b98282;
+
+    margin: 25px 0;
+}
+
+/* BUTTON */
+
+button {
+    border: none;
+
+    background: #9d7070;
+
+    color: white;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 0.95rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(100, 60, 60, 0.2);
+}/* =========================
+   SCRAPBOOK SECTION
+========================= */
+
+.scrapbook {
+    min-height: 100vh;
+
+    padding: 100px 8%;
+
+    background: #f5e9e4;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+.scrapbook-header {
+    max-width: 750px;
+
+    margin: 0 auto 90px;
+
+    text-align: center;
+}
+
+.chapter {
+    color: #8f1d3f;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 0.8rem;
+
+    margin-bottom: 15px;
+}
+
+.scrapbook-header h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    color: #64152e;
+
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    color: #6e5b5b;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+/* MEMORY CARDS */
+
+.memory-card {
+    max-width: 1000px;
+
+    margin: 0 auto 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+.memory-card.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* TEXT */
+
+.memory-text {
+    flex: 1;
+}
+
+.memory-text span {
+    font-size: 0.8rem;
+
+    color: #a16b7a;
+
+    letter-spacing: 3px;
+}
+
+.memory-text h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 2.5rem;
+
+    color: #64152e;
+
+    margin: 10px 0 20px;
+}
+
+.memory-text p {
+    color: #6e5b5b;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* PHOTO PLACEHOLDER */
+
+.photo-placeholder {
+    width: 350px;
+
+    height: 400px;
+
+    background: #fffaf7;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow: 0 12px 30px rgba(80, 30, 40, 0.15);
+
+    transform: rotate(3deg);
+
+    position: relative;
+}
+
+.photo-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    top: -15px;
+
+    width: 100px;
+
+    height: 30px;
+
+    background: #d9b4b9;
+
+    opacity: 0.8;
+}
+
+.photo-placeholder span {
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+}
+
+.photo-placeholder p {
+    color: #8f7070;
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+}
+
+
+/* LITTLE NOTE */
+
+.little-note {
+    max-width: 500px;
+
+    margin: 40px auto 100px;
+
+    padding: 30px;
+
+    background: #e8cdd1;
+
+    transform: rotate(-2deg);
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(80, 30, 40, 0.1);
+}
+
+.little-note p {
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    color: #64152e;
+}
+
+
+/* CONTINUE */
+
+.continue {
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.continue p {
+    color: #8f7070;
+
+    margin-bottom: 10px;
+}
+
+.continue h3 {
+    font-family: 'Playfair Display', serif;
+
+    color: #64152e;
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+}
+
+.continue button {
+    background: #64152e;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .memory-card,
+    .memory-card.reverse {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .photo-placeholder {
+        width: 85%;
+
+        height: 350px;
+    }
+
+    .memory-text {
+        text-align: center;
+    }
+
+}
